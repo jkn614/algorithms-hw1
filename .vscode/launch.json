@@ -55,15 +55,6 @@
       "cwd": "${fileDirname}",
       "console": "integratedTerminal",
       "justMyCode": true
-    },
-    {
-      "name": "Python 디버그 (src/main.py)",
-      "type": "debugpy",
-      "request": "launch",
-      "program": "${workspaceFolder}/src/main.py",
-      "cwd": "${workspaceFolder}",
-      "console": "integratedTerminal",
-      "justMyCode": true
     }
   ]
 }
