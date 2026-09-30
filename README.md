@@ -1,9 +1,10 @@
-# algorithm-env
+# 과제 1. 정렬 비교 — 퀵 · 병합 · Timsort
 
-2026-2 **고급알고리즘**(SIT2001-01)의 **실습 환경 template**입니다.
-컴파일러와 Python이 들어 있는 컨테이너, `src`/`tests` 뼈대, 그리고 그것이
-실제로 도는지 보여 주는 정렬 예제 하나가 들어 있습니다.
+2026-2 **고급알고리즘**(SIT2001-01) 과제 1. 배운 정렬 둘(퀵 · 병합)과 배우지
+않은 정렬 하나(Timsort)를 하나의 인터페이스로 구현하고 같은 잣대로 비교했습니다.
+실습 환경 template(`lec-algorithm/hw1-sample-2026`)에서 시작했습니다.
 
+- **보고서: [report/REPORT.md](report/REPORT.md)**
 - 강의 자료: [lec-algorithm.github.io/lecture](https://lec-algorithm.github.io/lecture/)
 - 강의 예제 코드: [lec-algorithm/algorithm-code](https://github.com/lec-algorithm/algorithm-code)
 - 시각화 자료: [lec-algorithm/algorithm-viz](https://github.com/lec-algorithm/algorithm-viz)
@@ -66,11 +67,15 @@ make run
 - 결과
 
 ```console
-sorted: 1 2 3 4 5 6 7 8 9 10
-sorted: 1 2 3 4 5 6 7 8 9 10
+=== 정렬 비교: 퀵 · 병합 · Timsort ===
+...
+[정렬됨]
+알고리즘     시간(ms)         비교         이동       메모리 재귀깊이 정렬 안정성
+--------------------------------------------------------------------------------
+quickSort       5.221      1606802       206784          8 B     16   yes    yes
+mergeSort      16.882       815024      3337856     800008 B     18   yes    yes
+timSort         0.216        99999            0          8 B      1   yes    yes
 ```
-
-C와 Python 두 구현이 같은 결과를 냅니다.
 
 ## 테스트
 
@@ -83,18 +88,10 @@ make test
 - 결과
 
 ```console
-ok    섞인 배열
-ok    이미 정렬된 배열
-ok    역순 배열
-ok    중복이 있는 배열
-ok    원소 하나
-ok    빈 배열
-
-6 checks, 0 failures
+ok    quickSort      섞인 배열
+ok    quickSort      이미 정렬된 배열
 ...
-Ran 7 tests in 0.001s
-
-OK
+50 checks, 0 failures
 ```
 
 테스트가 하나라도 실패하면 `make`가 0이 아닌 코드로 끝납니다. 과제를 내기
@@ -102,10 +99,9 @@ OK
 
 | 명령 | 하는 일 |
 | --- | --- |
-| `make run` | 예제 실행 (C · Python) |
-| `make test` | 유닛 테스트 (C · Python) |
-| `make run-c` · `make run-py` | 한쪽만 실행 |
-| `make test-c` · `make test-py` | 한쪽만 테스트 |
+| `make run` | 예제 실행 |
+| `make test` | 유닛 테스트 |
+| `make charts` | 비교 그래프(SVG)를 `report/` 아래에 다시 만든다 |
 | `make debug` | 디버그 심볼을 넣어 빌드 |
 | `make clean` | 빌드 산출물 정리 |
 
@@ -119,7 +115,6 @@ Codespaces나 Dev Containers로 열었다면 편집기에서 바로 됩니다.
 | 전체 실행 | `Cmd/Ctrl + Shift + B` (기본 빌드 작업이 `make run`) |
 | 테스트 | 명령 팔레트 → **Tasks: Run Test Task** |
 | C 디버그 | `F5` → **C 디버그 (현재 파일)** |
-| Python 디버그 | `F5` → **Python 디버그 (현재 파일)** |
 
 `F5`를 누르면 빌드가 먼저 돌아 심볼이 있는 바이너리를 만들고 디버거가
 붙습니다. 중단점을 걸고 변수를 들여다볼 수 있습니다.
@@ -170,25 +165,29 @@ algorithm-env/
 ├── .vscode/                         # 빌드·디버그 설정 (F5, Cmd+Shift+B)
 ├── Makefile                         # run · test · debug · clean
 ├── src/
-│   ├── sort.h · sort.c              # C 구현
-│   ├── main.c                       # C 실행 예제
-│   ├── sort.py                      # Python 구현
-│   └── main.py                      # Python 실행 예제
+│   ├── sort.h                       # 공통 인터페이스 (SortAlgorithm)
+│   ├── sortctx.h · sort.c           # 구현들이 함께 쓰는 도구 · 구현 표
+│   ├── quickSort.c                  # 퀵 정렬 (배운 정렬, 피벗 방식 셋)
+│   ├── mergeSort.c                  # 병합 정렬 (배운 정렬)
+│   ├── timSort.c                    # Timsort (배우지 않은 정렬)
+│   ├── bench.h · bench.c            # 시간 · 메모리 · 안정성 측정
+│   └── main.c                       # 비교 결과 출력 (--csv · --quick · --disorder)
+├── report/
+│   ├── REPORT.md                    # 정렬 비교 보고서
+│   ├── *.svg                        # 비교 그래프 (make charts가 만든다)
+│   └── *.csv                        # 그래프·표가 나온 측정값 원본
+├── tools/                           # 그래프를 그리는 스크립트 (표준 모듈만)
 └── tests/
-    ├── test_sort.c                  # C 유닛 테스트 (표준 C만 사용)
-    └── test_sort.py                 # Python 유닛 테스트 (unittest)
+    └── test_sort.c                  # 유닛 테스트 (표준 C만 사용)
 ```
 
 ## 규약
 
 - **실행 파일은 `*.out`으로 만듭니다.** `.gitignore`가 `*.out`만 걸러내므로,
   컨테이너에서 컴파일한 Linux 바이너리가 커밋에 섞이지 않습니다.
-- **외부 라이브러리를 쓰지 않습니다.** C는 표준 라이브러리만, Python은 표준
-  모듈만 씁니다. C 테스트도 프레임워크 없이 `assert` 수준으로 직접 씁니다.
-- **C와 Python은 같은 알고리즘을 같은 이름의 함수로 구현합니다.** 언어 차이가
-  알고리즘 차이로 보이지 않게 합니다.
-- 파일명은 각 언어의 관례를 따릅니다. C는 camelCase(`bubbleSort`), Python은
-  snake_case(`bubble_sort`)입니다.
+- **외부 라이브러리를 쓰지 않습니다.** 표준 라이브러리만 씁니다. 테스트도
+  프레임워크 없이 `assert` 수준으로 직접 씁니다.
+- 함수 이름은 camelCase(`bubbleSort`)를 씁니다.
 
 ## 자기 코드로 바꾸기
 

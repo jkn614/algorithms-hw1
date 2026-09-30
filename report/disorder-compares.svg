@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="894" height="432" viewBox="0 0 894 432" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif">
+  <rect width="894" height="432" fill="#fbfbf9"/>
+  <text x="20.0" y="30.0" font-size="16" fill="#24292f" text-anchor="start" font-weight="600">정렬된 배열을 흐트러뜨릴수록 — 비교 횟수 (로그 축)</text>
+  <text x="20.0" y="50.0" font-size="11.5" fill="#6e7781" text-anchor="start" font-weight="400">n = 100,000 · 가로축은 두 자리를 맞바꾼 횟수. 왼쪽 끝이 정렬됨, 오른쪽 끝은 사실상 무작위</text>
+  <line x1="78.0" y1="370.0" x2="870.0" y2="370.0" stroke="#dfe1e4" stroke-width="1" stroke-dasharray="none"/>
+  <text x="68.0" y="374.0" font-size="10.5" fill="#6e7781" text-anchor="end" font-weight="400">10K</text>
+  <line x1="78.0" y1="275.3" x2="870.0" y2="275.3" stroke="#dfe1e4" stroke-width="1" stroke-dasharray="none"/>
+  <text x="68.0" y="279.3" font-size="10.5" fill="#6e7781" text-anchor="end" font-weight="400">100K</text>
+  <line x1="78.0" y1="180.7" x2="870.0" y2="180.7" stroke="#dfe1e4" stroke-width="1" stroke-dasharray="none"/>
+  <text x="68.0" y="184.7" font-size="10.5" fill="#6e7781" text-anchor="end" font-weight="400">1M</text>
+  <line x1="78.0" y1="86.0" x2="870.0" y2="86.0" stroke="#dfe1e4" stroke-width="1" stroke-dasharray="none"/>
+  <text x="68.0" y="90.0" font-size="10.5" fill="#6e7781" text-anchor="end" font-weight="400">10M</text>
+  <line x1="78.0" y1="370.0" x2="870.0" y2="370.0" stroke="#6e7781" stroke-width="1" stroke-dasharray="none"/>
+  <text x="20.0" y="74.0" font-size="11.5" fill="#6e7781" text-anchor="start" font-weight="400">비교 횟수</text>
+  <rect x="99.0" y="161.2" width="27.0" height="208.8" fill="#0072B2"/>
+  <text x="112.5" y="156.2" font-size="9.5" fill="#6e7781" text-anchor="middle" font-weight="400">1.6M</text>
+  <rect x="129.0" y="189.1" width="27.0" height="180.9" fill="#E69F00"/>
+  <text x="142.5" y="184.1" font-size="9.5" fill="#6e7781" text-anchor="middle" font-weight="400">815K</text>
+  <rect x="159.0" y="275.3" width="27.0" height="94.7" fill="#009E73"/>
+  <text x="172.5" y="270.3" font-size="9.5" fill="#6e7781" text-anchor="middle" font-weight="400">100K</text>
+  <text x="144.0" y="388.0" font-size="11.5" fill="#24292f" text-anchor="middle" font-weight="400">0번</text>
+  <rect x="231.0" y="161.2" width="27.0" height="208.8" fill="#0072B2"/>
+  <text x="244.5" y="156.2" font-size="9.5" fill="#6e7781" text-anchor="middle" font-weight="400">1.6M</text>
+  <rect x="261.0" y="181.4" width="27.0" height="188.6" fill="#E69F00"/>
+  <text x="274.5" y="176.4" font-size="9.5" fill="#6e7781" text-anchor="middle" font-weight="400">983K</text>
+  <rect x="291.0" y="222.3" width="27.0" height="147.7" fill="#009E73"/>
+  <text x="304.5" y="217.3" font-size="9.5" fill="#6e7781" text-anchor="middle" font-weight="400">363K</text>
+  <text x="276.0" y="388.0" font-size="11.5" fill="#24292f" text-anchor="middle" font-weight="400">10번</text>
+  <rect x="363.0" y="161.1" width="27.0" height="208.9" fill="#0072B2"/>
+  <text x="376.5" y="156.1" font-size="9.5" fill="#6e7781" text-anchor="middle" font-weight="400">1.6M</text>
+  <rect x="393.0" y="175.6" width="27.0" height="194.4" fill="#E69F00"/>
+  <text x="406.5" y="170.6" font-size="9.5" fill="#6e7781" text-anchor="middle" font-weight="400">1.1M</text>
+  <rect x="423.0" y="194.0" width="27.0" height="176.0" fill="#009E73"/>
+  <text x="436.5" y="189.0" font-size="9.5" fill="#6e7781" text-anchor="middle" font-weight="400">723K</text>
+  <text x="408.0" y="388.0" font-size="11.5" fill="#24292f" text-anchor="middle" font-weight="400">100번</text>
+  <rect x="495.0" y="160.4" width="27.0" height="209.6" fill="#0072B2"/>
+  <text x="508.5" y="155.4" font-size="9.5" fill="#6e7781" text-anchor="middle" font-weight="400">1.6M</text>
+  <rect x="525.0" y="169.7" width="27.0" height="200.3" fill="#E69F00"/>
+  <text x="538.5" y="164.7" font-size="9.5" fill="#6e7781" text-anchor="middle" font-weight="400">1.3M</text>
+  <rect x="555.0" y="173.9" width="27.0" height="196.1" fill="#009E73"/>
+  <text x="568.5" y="168.9" font-size="9.5" fill="#6e7781" text-anchor="middle" font-weight="400">1.2M</text>
+  <text x="540.0" y="388.0" font-size="11.5" fill="#24292f" text-anchor="middle" font-weight="400">1,000번</text>
+  <rect x="627.0" y="157.1" width="27.0" height="212.9" fill="#0072B2"/>
+  <text x="640.5" y="152.1" font-size="9.5" fill="#6e7781" text-anchor="middle" font-weight="400">1.8M</text>
+  <rect x="657.0" y="165.1" width="27.0" height="204.9" fill="#E69F00"/>
+  <text x="670.5" y="160.1" font-size="9.5" fill="#6e7781" text-anchor="middle" font-weight="400">1.5M</text>
+  <rect x="687.0" y="163.7" width="27.0" height="206.3" fill="#009E73"/>
+  <text x="700.5" y="158.7" font-size="9.5" fill="#6e7781" text-anchor="middle" font-weight="400">1.5M</text>
+  <text x="672.0" y="388.0" font-size="11.5" fill="#24292f" text-anchor="middle" font-weight="400">10,000번</text>
+  <rect x="759.0" y="153.2" width="27.0" height="216.8" fill="#0072B2"/>
+  <text x="772.5" y="148.2" font-size="9.5" fill="#6e7781" text-anchor="middle" font-weight="400">2M</text>
+  <rect x="789.0" y="163.0" width="27.0" height="207.0" fill="#E69F00"/>
+  <text x="802.5" y="158.0" font-size="9.5" fill="#6e7781" text-anchor="middle" font-weight="400">1.5M</text>
+  <rect x="819.0" y="162.6" width="27.0" height="207.4" fill="#009E73"/>
+  <text x="832.5" y="157.6" font-size="9.5" fill="#6e7781" text-anchor="middle" font-weight="400">1.6M</text>
+  <text x="804.0" y="388.0" font-size="11.5" fill="#24292f" text-anchor="middle" font-weight="400">100,000번</text>
+  <line x1="78.0" y1="402.0" x2="100.0" y2="402.0" stroke="#0072B2" stroke-width="2.4" stroke-dasharray="none"/>
+  <circle cx="89.0" cy="402.0" r="3" fill="#0072B2"/>
+  <text x="106.0" y="406.0" font-size="11.5" fill="#24292f" text-anchor="start" font-weight="400">quickSort</text>
+  <line x1="183.4" y1="402.0" x2="205.4" y2="402.0" stroke="#E69F00" stroke-width="2.4" stroke-dasharray="7 4"/>
+  <circle cx="194.4" cy="402.0" r="3" fill="#E69F00"/>
+  <text x="211.4" y="406.0" font-size="11.5" fill="#24292f" text-anchor="start" font-weight="400">mergeSort</text>
+  <line x1="288.8" y1="402.0" x2="310.8" y2="402.0" stroke="#009E73" stroke-width="2.4" stroke-dasharray="2 3"/>
+  <circle cx="299.8" cy="402.0" r="3" fill="#009E73"/>
+  <text x="316.8" y="406.0" font-size="11.5" fill="#24292f" text-anchor="start" font-weight="400">timSort</text>
+</svg>

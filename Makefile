@@ -1,8 +1,9 @@
 # 빌드와 테스트를 한 단어로 돌리기 위한 Makefile.
 # 컨테이너 안에서 실행한다 (docker compose exec lab bash).
 #
-#   make run     예제 실행 (C, Python)
-#   make test    유닛 테스트 (C, Python)
+#   make run     예제 실행
+#   make test    유닛 테스트
+#   make charts  비교 그래프(SVG)를 report/ 아래에 다시 만든다
 #   make debug   디버그 심볼을 넣어 빌드 (VS Code의 F5가 쓴다)
 #   make clean   빌드 산출물 정리
 #
@@ -14,25 +15,23 @@ CFLAGS ?= -std=c17 -Wall -Wextra -O2
 # `-I`는 아래 패턴 규칙이 대상 파일의 폴더로 붙인다. 여기서 고정하지 않는다.
 DEBUGFLAGS ?= -std=c17 -Wall -Wextra -g -O0
 
-.PHONY: all run run-c run-py test test-c test-py debug clean
+.PHONY: all run run-c test test-c charts debug clean
 
 all: test
 
-run: run-c run-py
+run: run-c
 
 run-c: src/main.out
 	@./src/main.out
 
-run-py:
-	@python3 src/main.py
-
-test: test-c test-py
+test: test-c
 
 test-c: tests/test_sort.out
 	@./tests/test_sort.out
 
-test-py:
-	@python3 -m unittest discover -s tests -v
+# 그래프는 표준 모듈만 쓰는 tools/plot.py가 SVG로 직접 찍는다 (외부 라이브러리 없음).
+charts: src/main.out
+	@python3 tools/plot.py
 
 debug: src/main.debug.out
 
@@ -47,9 +46,11 @@ debug: src/main.debug.out
 %.debug.out: %.c
 	$(CC) $(DEBUGFLAGS) -I$(@D) -o $@ $(wildcard $(@D)/*.c)
 
-tests/test_sort.out: tests/test_sort.c src/sort.c src/sort.h
-	$(CC) $(CFLAGS) -Isrc -o $@ tests/test_sort.c src/sort.c
+# 정렬 구현이 파일마다 하나씩이라 여기에도 나열한다. 새 정렬을 넣으면 이 줄도 본다.
+SORT_SRC = src/sort.c src/quickSort.c src/mergeSort.c src/timSort.c
+
+tests/test_sort.out: tests/test_sort.c $(SORT_SRC) src/sort.h src/sortctx.h src/bench.c src/bench.h
+	$(CC) $(CFLAGS) -Isrc -o $@ tests/test_sort.c $(SORT_SRC) src/bench.c
 
 clean:
 	rm -f src/*.out tests/*.out
-	rm -rf src/__pycache__ tests/__pycache__

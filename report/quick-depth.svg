@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="432" viewBox="0 0 720 432" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif">
+  <rect width="720" height="432" fill="#fbfbf9"/>
+  <text x="20.0" y="30.0" font-size="16" fill="#24292f" text-anchor="start" font-weight="600">퀵 정렬 피벗·분할 방식별 재귀 깊이 — 모두같음 입력</text>
+  <text x="20.0" y="50.0" font-size="11.5" fill="#6e7781" text-anchor="start" font-weight="400">로그-로그 · Lomuto는 깊이가 n 그대로다. n이 수만이면 스택이 넘친다</text>
+  <line x1="78.0" y1="374.0" x2="696.0" y2="374.0" stroke="#dfe1e4" stroke-width="1" stroke-dasharray="none"/>
+  <text x="68.0" y="378.0" font-size="10.5" fill="#6e7781" text-anchor="end" font-weight="400">1</text>
+  <line x1="78.0" y1="316.4" x2="696.0" y2="316.4" stroke="#dfe1e4" stroke-width="1" stroke-dasharray="none"/>
+  <text x="68.0" y="320.4" font-size="10.5" fill="#6e7781" text-anchor="end" font-weight="400">10</text>
+  <line x1="78.0" y1="258.8" x2="696.0" y2="258.8" stroke="#dfe1e4" stroke-width="1" stroke-dasharray="none"/>
+  <text x="68.0" y="262.8" font-size="10.5" fill="#6e7781" text-anchor="end" font-weight="400">100</text>
+  <line x1="78.0" y1="201.2" x2="696.0" y2="201.2" stroke="#dfe1e4" stroke-width="1" stroke-dasharray="none"/>
+  <text x="68.0" y="205.2" font-size="10.5" fill="#6e7781" text-anchor="end" font-weight="400">1K</text>
+  <line x1="78.0" y1="143.6" x2="696.0" y2="143.6" stroke="#dfe1e4" stroke-width="1" stroke-dasharray="none"/>
+  <text x="68.0" y="147.6" font-size="10.5" fill="#6e7781" text-anchor="end" font-weight="400">10K</text>
+  <line x1="78.0" y1="86.0" x2="696.0" y2="86.0" stroke="#dfe1e4" stroke-width="1" stroke-dasharray="none"/>
+  <text x="68.0" y="90.0" font-size="10.5" fill="#6e7781" text-anchor="end" font-weight="400">100K</text>
+  <line x1="78.0" y1="86.0" x2="78.0" y2="374.0" stroke="#dfe1e4" stroke-width="1" stroke-dasharray="2 4"/>
+  <text x="78.0" y="392.0" font-size="10.5" fill="#6e7781" text-anchor="middle" font-weight="400">1,000</text>
+  <line x1="232.5" y1="86.0" x2="232.5" y2="374.0" stroke="#dfe1e4" stroke-width="1" stroke-dasharray="2 4"/>
+  <text x="232.5" y="392.0" font-size="10.5" fill="#6e7781" text-anchor="middle" font-weight="400">2,000</text>
+  <line x1="387.0" y1="86.0" x2="387.0" y2="374.0" stroke="#dfe1e4" stroke-width="1" stroke-dasharray="2 4"/>
+  <text x="387.0" y="392.0" font-size="10.5" fill="#6e7781" text-anchor="middle" font-weight="400">4,000</text>
+  <line x1="541.5" y1="86.0" x2="541.5" y2="374.0" stroke="#dfe1e4" stroke-width="1" stroke-dasharray="2 4"/>
+  <text x="541.5" y="392.0" font-size="10.5" fill="#6e7781" text-anchor="middle" font-weight="400">8,000</text>
+  <line x1="696.0" y1="86.0" x2="696.0" y2="374.0" stroke="#dfe1e4" stroke-width="1" stroke-dasharray="2 4"/>
+  <text x="696.0" y="392.0" font-size="10.5" fill="#6e7781" text-anchor="middle" font-weight="400">16,000</text>
+  <line x1="78.0" y1="374.0" x2="696.0" y2="374.0" stroke="#6e7781" stroke-width="1" stroke-dasharray="none"/>
+  <line x1="78.0" y1="86.0" x2="78.0" y2="374.0" stroke="#6e7781" stroke-width="1" stroke-dasharray="none"/>
+  <text x="387.0" y="418.0" font-size="11.5" fill="#6e7781" text-anchor="middle" font-weight="400">n (원소 개수)</text>
+  <text x="20.0" y="74.0" font-size="11.5" fill="#6e7781" text-anchor="start" font-weight="400">재귀 깊이</text>
+  <polyline points="78.0,201.2 232.5,183.9 387.0,166.5 541.5,149.2 696.0,131.8" fill="none" stroke="#D55E00" stroke-width="2.2" stroke-dasharray="7 4" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="78.0" cy="201.2" r="3.4" fill="#D55E00"/>
+  <circle cx="232.5" cy="183.9" r="3.4" fill="#D55E00"/>
+  <circle cx="387.0" cy="166.5" r="3.4" fill="#D55E00"/>
+  <circle cx="541.5" cy="149.2" r="3.4" fill="#D55E00"/>
+  <circle cx="696.0" cy="131.8" r="3.4" fill="#D55E00"/>
+  <text x="690.0" y="120.8" font-size="11" fill="#D55E00" text-anchor="end" font-weight="600">first-lomuto 기울기 1.00</text>
+  <polyline points="78.0,201.2 232.5,183.9 387.0,166.5 541.5,149.2 696.0,131.8" fill="none" stroke="#CC79A7" stroke-width="2.2" stroke-dasharray="2 3" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="78.0" cy="201.2" r="3.4" fill="#CC79A7"/>
+  <circle cx="232.5" cy="183.9" r="3.4" fill="#CC79A7"/>
+  <circle cx="387.0" cy="166.5" r="3.4" fill="#CC79A7"/>
+  <circle cx="541.5" cy="149.2" r="3.4" fill="#CC79A7"/>
+  <circle cx="696.0" cy="131.8" r="3.4" fill="#CC79A7"/>
+  <text x="690.0" y="106.8" font-size="11" fill="#CC79A7" text-anchor="end" font-weight="600">random-lomuto 기울기 1.00</text>
+  <polyline points="78.0,319.0 232.5,316.4 387.0,314.0 541.5,311.8 696.0,309.8" fill="none" stroke="#0072B2" stroke-width="2.2" stroke-dasharray="none" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="78.0" cy="319.0" r="3.4" fill="#0072B2"/>
+  <circle cx="232.5" cy="316.4" r="3.4" fill="#0072B2"/>
+  <circle cx="387.0" cy="314.0" r="3.4" fill="#0072B2"/>
+  <circle cx="541.5" cy="311.8" r="3.4" fill="#0072B2"/>
+  <circle cx="696.0" cy="309.8" r="3.4" fill="#0072B2"/>
+  <text x="690.0" y="298.8" font-size="11" fill="#0072B2" text-anchor="end" font-weight="600">median3-hoare 기울기 0.13</text>
+  <line x1="78.0" y1="398.0" x2="100.0" y2="398.0" stroke="#D55E00" stroke-width="2.4" stroke-dasharray="7 4"/>
+  <circle cx="89.0" cy="398.0" r="3" fill="#D55E00"/>
+  <text x="106.0" y="402.0" font-size="11.5" fill="#24292f" text-anchor="start" font-weight="400">first-lomuto</text>
+  <line x1="203.2" y1="398.0" x2="225.2" y2="398.0" stroke="#CC79A7" stroke-width="2.4" stroke-dasharray="2 3"/>
+  <circle cx="214.2" cy="398.0" r="3" fill="#CC79A7"/>
+  <text x="231.2" y="402.0" font-size="11.5" fill="#24292f" text-anchor="start" font-weight="400">random-lomuto</text>
+  <line x1="335.0" y1="398.0" x2="357.0" y2="398.0" stroke="#0072B2" stroke-width="2.4" stroke-dasharray="none"/>
+  <circle cx="346.0" cy="398.0" r="3" fill="#0072B2"/>
+  <text x="363.0" y="402.0" font-size="11.5" fill="#24292f" text-anchor="start" font-weight="400">median3-hoare</text>
+</svg>
